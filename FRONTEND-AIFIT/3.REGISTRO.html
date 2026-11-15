@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT - Registro</title>
+    <link rel="stylesheet" href="7.ESTILO_AIFIT.css">
+</head>
+
+<body>
+
+    <main class="hero-container">
+        <div class="card-inicio card-registro">
+            <h1 class="logo-title">AIFIT</h1>
+            <h2 class="sub-title">Datos de Registro</h2>
+
+            <form id="formRegistro" class="form-login">
+
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required autocomplete="off" placeholder="Tu nombre">
+                </div>
+
+                <div class="input-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required autocomplete="off"
+                        placeholder="Tu apellido">
+                </div>
+
+                <div class="input-group">
+                    <label for="usuarionombre">Nombre de usuario:</label>
+                    <input type="text" id="usuarionombre" name="usuarionombre" required autocomplete="off"
+                        placeholder="Elige un usuario">
+                </div>
+
+                <div class="input-group">
+                    <label for="fdn">Fecha de nacimiento:</label>
+                    <input type="date" id="fdn" name="fdn" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required autocomplete="off"
+                        placeholder="tucorreo@AIFIT.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" required placeholder="••••••••">
+                </div>
+
+                <div class="input-group">
+                    <label for="confir">Confirma la contraseña:</label>
+                    <input type="password" id="confir" name="confir" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn btn-submit">Completar Registro</button>
+            </form>
+
+            <div class="volver-link">
+                <a href="1.INICIO.html">← Volver al inicio</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="8.app.js"></script>
+</body>
+
+</html>

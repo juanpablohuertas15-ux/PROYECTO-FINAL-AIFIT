@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT - Chat Coach</title>
+    <link rel="stylesheet" href="7.ESTILO_AIFIT.css">
+    <script src="8.app.js"></script>
+</head>
+
+<body class="body-chat-page">
+
+    <div class="aifit-chat-container">
+
+        <!-- BARRA DE NAVEGACIÓN SUPERIOR (FIJA) -->
+        <header class="navbar-feed">
+            <div class="nav-content">
+                <h1 class="nav-logo">AIFIT</h1>
+
+                <form action="/buscar" method="GET" class="buscador-form">
+                    <input type="text" id="b" name="b" placeholder="Buscar en AIFIT..." autocomplete="off">
+                    <button type="submit" class="btn-buscador">🔍</button>
+                </form>
+
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="4.INDEX.html" class="nav-link">Inicio</a></li>
+                        <li><a href="5.AIFIT.html" class="nav-link active-link">Aifit</a></li>
+                        <li><a href="6.PERFIL.html" class="nav-link">Perfil</a></li>
+                    </ul>
+
+                    <div class="user-pill">
+                        <img src="fotico.jpg" alt="Foto de perfil" class="perfilito">
+                        <span class="nombreperfil">Juan Huertas</span>
+                    </div>
+
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="btn-cerrar-sesion">Salir</button>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <!-- SECCIÓN PRINCIPAL DEL CHAT CENTRADO -->
+        <main class="chat-main-wrapper">
+
+            <!-- CABECERA DEL COACH IA -->
+            <header class="chataifit">
+                <div class="chatinfo">
+                    <div class="interfaz-chat">
+                        <img src="avatarchat.jpg" alt="Foto Aifit" class="chat_avatar">
+                        <span class="estado-online"></span>
+                    </div>
+
+                    <div class="contenido-chat">
+                        <h3>Aifit-Coach</h3>
+                        <span class="subtitulo-chat">Tu entrenador 24/7</span>
+                    </div>
+                </div>
+                <button class="btn-borrar_chat" title="Borrar conversación">🗑️</button>
+            </header>
+
+            <!-- BOTONES DE TEMAS RÁPIDOS -->
+            <div class="tema_conversacion">
+                <button class="tema">🔥 Rutinas</button>
+                <button class="tema">🥗 Calorías</button>
+                <button class="tema">💊 Suplementos</button>
+            </div>
+
+            <!-- HISTORIAL DE MENSAJES -->
+            <div class="chat_mesage">
+
+                <!-- Mensaje de la IA -->
+                <div class="mensaje-bubble msg-ia">
+                    <p>Hablalo mi papacho ¡soy tu coach nutricional y de entrenamiento!</p>
+                    <p>Cuentamelo todo!!!</p>
+                    <span class="hora_mensaje">10:00 am</span>
+                </div>
+
+                <!-- Mensaje del Usuario -->
+                <div class="mensaje-bubble msg-usuario">
+                    <img src="imagenejemplo.jpg" alt="Foto adjunta" class="img-adjunta-chat">
+                    <p>Hola necesito que me digas cuantas calorias tiene mi plato y que me recomiendas de rutina para
+                        rebajar de peso segun la comida que te mande</p>
+                    <span class="hora_mensaje">10:01 am</span>
+                </div>
+
+                <!-- Mensaje largo de la IA -->
+                <div class="mensaje-bubble msg-ia">
+                    <p>Papi ahi se ve que es una arepa con aproximadamente 23 huevos revueltos</p>
+                    <p><strong>Arepa calorías aprox =</strong> 200 kcal</p>
+                    <p><strong>3 Huevos calorías aprox =</strong> 250 kcal</p>
+                    <p><strong>Añadidos Aceite, Mantequilla =</strong> 120 kcal</p>
+                    <p><strong>Total de calorías =</strong> 570 kcal</p>
+                    <p>Para un desayuno esta mas que bien</p>
+                    <p>Ahora bien para ejercitarse segun la comida que ingeriste te recomendaria un buen levantamiento
+                        de pesas y seccion de calistenia al fallo ¿quieres que te de los ejercicios?</p>
+                    <span class="hora_mensaje">10:02 am</span>
+                </div>
+
+            </div>
+
+            <!-- VISTA PREVIA DE ARCHIVO ADJUNTO -->
+            <div class="preview-archivo" id="previewArchivo" style="display: none;">
+                <span class="preview-nombre">📷 foto_comida.jpg</span>
+                <button class="btn-cancelar-adjunto">❌</button>
+            </div>
+
+            <!-- BARRA INFERIOR FIJA PARA ESCRIBIR Y ENVIAR -->
+            <footer class="barra_chat_aifit">
+                <form class="barra_chataifit" action="/Api_geminis" method="POST" enctype="multipart/form-data">
+                    <label for="envio_foto" class="btn_subirfoto" title="Subir foto">📷</label>
+                    <input type="file" id="envio_foto" name="foto_ia" accept="image/*" style="display: none;">
+
+                    <input type="text" id="mensaje_usu" name="mensajito_usu" placeholder="Habla con la IA..." required
+                        autocomplete="off">
+
+                    <button type="submit" class="btn_enviar">Enviar</button>
+                </form>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

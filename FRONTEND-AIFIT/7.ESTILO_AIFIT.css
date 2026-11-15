@@ -1,0 +1,1092 @@
+
+
+/* ==========================================================
+   INCIO
+   ========================================================== */
+
+
+
+/* ==========================================================
+   VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================================== */
+:root {
+    --fondo: #0f0f11;
+    --color-tarjeta: #16161a;
+    --color-principal: #d4af37;
+    --sombra-dorada: rgba(212, 175, 55, 0.25);
+    --texto: #ffffff;
+    --texto-secundario: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================================
+   CONTENEDOR Y TARJETA CON BORDE DORADO
+   ========================================================== */
+.hero-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-inicio {
+    background-color: var(--color-tarjeta);
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--color-principal);
+    box-shadow: 0 0 20px var(--sombra-dorada);
+}
+
+/* ==========================================================
+   TIPOGRAFÍA (TÍTULOS Y EL LOREM IPSUM)
+   ========================================================== */
+.logo-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--color-principal);
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 10px var(--sombra-dorada);
+}
+
+.sub-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--texto);
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 0.95rem;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================
+   BOTONES Y EFECTOS HOVER
+   ========================================================== */
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-registro {
+    background-color: var(--color-principal);
+    color: #000000;
+    border: 1px solid var(--color-principal);
+}
+
+.btn-registro:hover {
+    background-color: #f3ca4d;
+    box-shadow: 0 0 15px var(--sombra-dorada);
+    transform: translateY(-2px);
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+}
+
+.btn-login:hover {
+    background-color: var(--sombra-dorada);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   INICIO DE SESION - FORMULARIO 
+   ========================================================== */
+
+
+
+
+/* ==========================================================
+   ESTILOS PARA LOS FORMULARIOS DE AIFIT
+   ========================================================== */
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    /* Espacio limpio entre cada campo */
+    margin-top: 20px;
+    text-align: left;
+    /* Las etiquetas quedan alineadas a la izquierda */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--texto-secundario);
+}
+
+/* Campos de texto / inputs con diseño oscuro y toque dorado sutil */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--fondo);
+    border: 1px solid #333338;
+    border-radius: 8px;
+    color: var(--texto);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el usuario hace clic dentro del input (Se ilumina en dorado) */
+.input-group input:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    box-shadow: 0 0 10px var(--sombra-dorada);
+}
+
+/* Botón de envío del formulario */
+.btn-submit {
+    background-color: var(--color-principal);
+    color: #000000;
+    border: 1px solid var(--color-principal);
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-submit:hover {
+    background-color: #f3ca4d;
+    box-shadow: 0 0 15px var(--sombra-dorada);
+    transform: translateY(-2px);
+}
+
+/* Enlace para volver */
+.volver-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.volver-link a {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.volver-link a:hover {
+    color: var(--color-principal);
+}
+
+
+/* Ajuste de tamaño para la tarjeta de registro por tener más campos */
+.card-registro {
+    max-width: 480px;
+    /* Un poco más ancha para que respiren bien los inputs */
+    padding: 30px 25px;
+}
+
+
+/* ==========================================================
+   FEED
+   ========================================================== */
+
+
+
+
+   /* ==========================================================
+   VARIABLES GLOBALES (AIFIT THEME - NEGRO Y DORADO)
+   ========================================================== */
+   :root {
+       --fondo: #0f0f11;
+       --color-tarjeta: #16161a;
+       --border-color: #2a2a30;
+       --color-principal: #d4af37;
+       --sombra-dorada: rgba(212, 175, 55, 0.25);
+       --texto: #ffffff;
+       --texto-secundario: #a0a0a0;
+   }
+
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+
+   body {
+       background-color: var(--fondo);
+       color: var(--texto);
+       min-height: 100vh;
+   }
+
+   /* ==========================================================
+   BARRA SUPERIOR FIJA (LOGO, BUSCADOR, MENÚ Y OPCIONES)
+   ========================================================== */
+   .navbar-feed {
+       background-color: var(--color-tarjeta);
+       border-bottom: 1px solid var(--border-color);
+       position: fixed;
+       /* Mantiene la barra fija arriba del todo */
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 75px;
+       z-index: 1000;
+       display: flex;
+       align-items: center;
+       padding: 0 25px;
+       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+   }
+
+   .nav-content {
+       max-width: 1200px;
+       width: 100%;
+       margin: 0 auto;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 20px;
+   }
+
+   /* Logo */
+   .nav-logo {
+       font-size: 1.8rem;
+       font-weight: 800;
+       color: var(--color-principal);
+       letter-spacing: 2px;
+       text-shadow: 0 0 10px var(--sombra-dorada);
+   }
+
+   /* Buscador central */
+   .buscador-form {
+       display: flex;
+       align-items: center;
+       background-color: var(--fondo);
+       border: 1px solid var(--border-color);
+       border-radius: 20px;
+       padding: 6px 14px;
+       width: 280px;
+       transition: border-color 0.3s ease;
+   }
+
+   .buscador-form:focus-within {
+       border-color: var(--color-principal);
+       box-shadow: 0 0 8px var(--sombra-dorada);
+   }
+
+   .buscador-form input {
+       background: transparent;
+       border: none;
+       color: var(--texto);
+       outline: none;
+       width: 100%;
+       font-size: 0.9rem;
+   }
+
+   .btn-buscador {
+       background: transparent;
+       border: none;
+       cursor: pointer;
+       font-size: 0.95rem;
+   }
+
+   /* Menú de Enlaces, Perfil y Botón Salir */
+   .nav-menu {
+       display: flex;
+       align-items: center;
+       gap: 20px;
+   }
+
+   .nav-menu ul {
+       display: flex;
+       list-style: none;
+       gap: 15px;
+       align-items: center;
+   }
+
+   /* Enlaces (Inicio, Aifit, Perfil) */
+   .nav-menu ul li a {
+       color: var(--texto-secundario);
+       text-decoration: none;
+       font-weight: 600;
+       font-size: 0.95rem;
+       transition: color 0.3s ease;
+   }
+
+   .nav-menu ul li a:hover {
+       color: var(--color-principal);
+       text-shadow: 0 0 8px var(--sombra-dorada);
+   }
+
+   /* Información del usuario logueado */
+   .user-pill {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+       background-color: var(--fondo);
+       padding: 4px 12px;
+       border-radius: 20px;
+       border: 1px solid var(--border-color);
+   }
+
+   .perfilito {
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       object-fit: cover;
+       border: 1px solid var(--color-principal);
+   }
+
+   .nombreperfil {
+       font-size: 0.85rem;
+       font-weight: 600;
+       color: var(--texto);
+   }
+
+   /* Botón Cerrar Sesión */
+   .btn-cerrar-sesion {
+       background-color: transparent;
+       color: #ff4d4d;
+       border: 1px solid #ff4d4d;
+       padding: 6px 14px;
+       border-radius: 8px;
+       cursor: pointer;
+       font-size: 0.85rem;
+       font-weight: 600;
+       transition: all 0.3s ease;
+   }
+
+   .btn-cerrar-sesion:hover {
+       background-color: #ff4d4d;
+       color: #fff;
+       box-shadow: 0 0 10px rgba(255, 77, 77, 0.4);
+   }
+
+   /* ==========================================================
+   CONTENEDOR PRINCIPAL Y CENTRADO DE PUBLICACIONES
+   ========================================================== */
+   .main-feed-content {
+       max-width: 600px;
+       /* Ancho cómodo y centrado tipo Instagram */
+       margin: 105px auto 40px auto;
+       /* Deja espacio arriba para que la barra fija no tape nada */
+       padding: 0 15px;
+       display: flex;
+       flex-direction: column;
+       gap: 25px;
+   }
+
+   /* ==========================================================
+   CAJA PARA CREAR PUBLICACIÓN (ESTILO DORADO/OSCURO)
+   ========================================================== */
+   .publicrea {
+       background-color: var(--color-tarjeta);
+       border: 1px solid var(--color-principal);
+       border-radius: 14px;
+       padding: 18px 20px;
+       box-shadow: 0 0 20px var(--sombra-dorada);
+   }
+
+   .crear-header {
+       display: flex;
+       gap: 12px;
+       align-items: flex-start;
+   }
+
+   .fotoperfil {
+       width: 45px;
+       height: 45px;
+       border-radius: 50%;
+       object-fit: cover;
+       border: 1px solid var(--color-principal);
+   }
+
+   .crear-header textarea {
+       width: 100%;
+       background-color: var(--fondo);
+       border: 1px solid var(--border-color);
+       border-radius: 10px;
+       color: var(--texto);
+       padding: 12px;
+       resize: none;
+       height: 85px;
+       outline: none;
+       font-size: 0.95rem;
+   }
+
+   .crear-header textarea:focus {
+       border-color: var(--color-principal);
+       box-shadow: 0 0 8px var(--sombra-dorada);
+   }
+
+   .crear-footer {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 12px;
+       border-top: 1px solid var(--border-color);
+       padding-top: 12px;
+   }
+
+   .btn_abjunto_foto {
+       color: var(--color-principal);
+       font-size: 0.9rem;
+       font-weight: 600;
+       cursor: pointer;
+       transition: opacity 0.2s ease;
+   }
+
+   .btn_abjunto_foto:hover {
+       opacity: 0.8;
+   }
+
+   .btn_publicar {
+       background-color: var(--color-principal);
+       color: #000;
+       border: none;
+       padding: 8px 22px;
+       border-radius: 8px;
+       font-weight: 700;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .btn_publicar:hover {
+       background-color: #f3ca4d;
+       box-shadow: 0 0 12px var(--sombra-dorada);
+   }
+
+   /* ==========================================================
+   ESTILO DE LAS PUBLICACIONES (TARJETAS DEL MURO)
+   ========================================================== */
+   .muro_publicacion {
+       display: flex;
+       flex-direction: column;
+       gap: 25px;
+   }
+
+   .publiperson {
+       background-color: var(--color-tarjeta);
+       border: 1px solid var(--border-color);
+       border-radius: 14px;
+       overflow: hidden;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   }
+
+   .infopubliusu {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 14px 18px;
+       border-bottom: 1px solid var(--border-color);
+   }
+
+   .usuarioinfo {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+   }
+
+   .fotousu {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       object-fit: cover;
+       border: 1px solid var(--color-principal);
+   }
+
+   .usu-textos h4 {
+       font-size: 0.95rem;
+       color: var(--texto);
+       font-weight: 700;
+   }
+
+   .tiempoconectado {
+       font-size: 0.75rem;
+       color: var(--texto-secundario);
+   }
+
+   .btn_opciones_publi {
+       background: transparent;
+       border: none;
+       color: var(--texto-secundario);
+       font-size: 1.4rem;
+       cursor: pointer;
+       transition: color 0.3s ease;
+   }
+
+   .btn_opciones_publi:hover {
+       color: var(--color-principal);
+   }
+
+   /* Contenido del Post */
+   .contenido_publi p {
+       padding: 16px 18px;
+       font-size: 0.98rem;
+       line-height: 1.5;
+   }
+
+   .fotopersonpubli img {
+       width: 100%;
+       max-height: 480px;
+       object-fit: cover;
+       display: block;
+   }
+
+   /* Reacciones y Comentarios */
+   .publi_reaccion {
+       padding: 16px 18px;
+       display: flex;
+       flex-direction: column;
+       gap: 14px;
+       border-top: 1px solid var(--border-color);
+   }
+
+   .reacciones {
+       display: flex;
+       gap: 12px;
+   }
+
+   .btn_reaccion {
+       background-color: var(--fondo);
+       border: 1px solid var(--border-color);
+       color: var(--texto);
+       padding: 7px 14px;
+       border-radius: 8px;
+       font-size: 0.88rem;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+
+   .btn_reaccion:hover {
+       border-color: var(--color-principal);
+       background-color: var(--sombra-dorada);
+   }
+
+   .cajadecomentarios {
+       background-color: var(--fondo);
+       padding: 10px 14px;
+       border-radius: 8px;
+       font-size: 0.88rem;
+       border: 1px solid var(--border-color);
+   }
+
+   .comentario-item {
+       display: flex;
+       gap: 8px;
+       align-items: baseline;
+   }
+
+   .comentario-item strong {
+       color: var(--color-principal);
+   }
+
+   .comentario-item p {
+       color: var(--texto-secundario);
+       margin: 0;
+       padding: 0;
+   }
+
+   /* Formulario para comentar */
+   .form_comentar {
+       display: flex;
+       gap: 10px;
+       margin-top: 4px;
+   }
+
+   .form_comentar input {
+       flex: 1;
+       background-color: var(--fondo);
+       border: 1px solid var(--border-color);
+       border-radius: 8px;
+       padding: 9px 14px;
+       color: var(--texto);
+       outline: none;
+       font-size: 0.9rem;
+       transition: border-color 0.3s ease;
+   }
+
+   .form_comentar input:focus {
+       border-color: var(--color-principal);
+       box-shadow: 0 0 6px var(--sombra-dorada);
+   }
+
+   .form_comentar button {
+       background-color: transparent;
+       color: var(--color-principal);
+       border: 1px solid var(--color-principal);
+       padding: 9px 18px;
+       border-radius: 8px;
+       font-weight: 600;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .form_comentar button:hover {
+       background-color: var(--sombra-dorada);
+       box-shadow: 0 0 10px var(--sombra-dorada);
+   }
+
+
+
+   /* ==========================================================
+   CHAT - AIFIT
+   ========================================================== */
+
+
+   /* ==========================================================
+   ESTILOS ESPECÍFICOS PARA LA PÁGINA DEL CHAT (AIFIT COACH)
+   ========================================================== */
+
+   .chat-main-wrapper {
+       max-width: 750px;
+       margin: 100px auto 40px auto;
+       /* Centrado abajo de la barra superior fija */
+       background-color: var(--color-tarjeta);
+       border: 1px solid var(--border-color);
+       border-radius: 16px;
+       display: flex;
+       flex-direction: column;
+       overflow: hidden;
+       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+   }
+
+   /* 1. Cabecera del Chat del Coach */
+   .chataifit {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 16px 20px;
+       background-color: #121216;
+       border-bottom: 1px solid var(--border-color);
+   }
+
+   .chatinfo {
+       display: flex;
+       align-items: center;
+       gap: 15px;
+   }
+
+   .interfaz-chat {
+       position: relative;
+       display: flex;
+       align-items: center;
+   }
+
+   .chat_avatar {
+       width: 48px;
+       height: 48px;
+       border-radius: 50%;
+       object-fit: cover;
+       border: 2px solid var(--color-principal);
+   }
+
+   .estado-online {
+       position: absolute;
+       bottom: 2px;
+       right: 2px;
+       width: 12px;
+       height: 12px;
+       background-color: #00ff66;
+       border: 2px solid var(--color-tarjeta);
+       border-radius: 50%;
+   }
+
+   .contenido-chat h3 {
+       font-size: 1.1rem;
+       color: var(--texto);
+       font-weight: 700;
+   }
+
+   .subtitulo-chat {
+       font-size: 0.8rem;
+       color: var(--color-principal);
+   }
+
+   .btn-borrar_conversacion {
+       background: transparent;
+       border: 1px solid var(--border-color);
+       color: var(--texto-secundario);
+       font-size: 1.1rem;
+       padding: 8px 12px;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .btn-borrar_conversacion:hover {
+       border-color: #ff4d4d;
+       color: #ff4d4d;
+       background-color: rgba(255, 77, 77, 0.1);
+   }
+
+   /* 2. Botones de Temas Rápidos */
+   .tema_conversacion {
+       display: flex;
+       gap: 10px;
+       padding: 12px 20px;
+       background-color: #121216;
+       border-bottom: 1px solid var(--border-color);
+       overflow-x: auto;
+   }
+
+   .tema {
+       background-color: var(--fondo);
+       border: 1px solid var(--border-color);
+       color: var(--texto);
+       padding: 6px 14px;
+       border-radius: 20px;
+       font-size: 0.85rem;
+       font-weight: 600;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       white-space: nowrap;
+   }
+
+   .tema:hover {
+       border-color: var(--color-principal);
+       color: var(--color-principal);
+       background-color: var(--sombra-dorada);
+   }
+
+   /* 3. Área de Mensajes del Chat */
+   .chat_mesage {
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       gap: 16px;
+       max-height: 480px;
+       overflow-y: auto;
+       background-color: var(--fondo);
+   }
+
+   .mensaje-bubble {
+       max-width: 80%;
+       padding: 12px 16px;
+       border-radius: 12px;
+       font-size: 0.92rem;
+       line-height: 1.5;
+       display: flex;
+       flex-direction: column;
+       gap: 6px;
+   }
+
+   /* Mensajes de la IA (Izquierda) */
+   .msg-ia {
+       background-color: var(--color-tarjeta);
+       border: 1px solid var(--border-color);
+       color: var(--texto);
+       align-self: flex-start;
+       border-top-left-radius: 2px;
+   }
+
+   /* Mensajes del Usuario (Derecha - Estilo Dorado/Destacado) */
+   .msg-usuario {
+       background-color: rgba(212, 175, 55, 0.15);
+       border: 1px solid var(--color-principal);
+       color: var(--texto);
+       align-self: flex-end;
+       border-top-right-radius: 2px;
+   }
+
+   .img-adjunta-chat {
+       width: 100%;
+       max-height: 220px;
+       object-fit: cover;
+       border-radius: 8px;
+       margin-bottom: 6px;
+   }
+
+   .hora_mensaje {
+       font-size: 0.7rem;
+       color: var(--texto-secundario);
+       align-self: flex-end;
+   }
+
+   /* 4. Vista previa de archivo adjunto */
+   .preview-archivo {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 8px 16px;
+       background-color: #18181c;
+       border-top: 1px solid var(--border-color);
+       font-size: 0.85rem;
+       color: var(--color-principal);
+   }
+
+   .btn-cancelar-adjunto {
+       background: transparent;
+       border: none;
+       cursor: pointer;
+       font-size: 0.9rem;
+   }
+
+   /* 5. Barra Inferior para Escribir Mensaje */
+   .barra_chat_aifit {
+       background-color: var(--color-tarjeta);
+       border-top: 1px solid var(--border-color);
+       padding: 14px 20px;
+   }
+
+   .barra_chataifit {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+   }
+
+   .btn_subirfoto {
+       font-size: 1.4rem;
+       cursor: pointer;
+       transition: transform 0.2s ease;
+   }
+
+   .btn_subirfoto:hover {
+       transform: scale(1.1);
+   }
+
+   .barra_chataifit input[type="text"] {
+       flex: 1;
+       background-color: var(--fondo);
+       border: 1px solid var(--border-color);
+       border-radius: 10px;
+       padding: 10px 16px;
+       color: var(--texto);
+       outline: none;
+       font-size: 0.95rem;
+       transition: border-color 0.3s ease;
+   }
+
+   .barra_chataifit input[type="text"]:focus {
+       border-color: var(--color-principal);
+       box-shadow: 0 0 8px var(--sombra-dorada);
+   }
+
+   .btn_enviar {
+       background-color: var(--color-principal);
+       color: #000;
+       border: none;
+       padding: 10px 22px;
+       border-radius: 10px;
+       font-weight: 700;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .btn_enviar:hover {
+       background-color: #f3ca4d;
+       box-shadow: 0 0 12px var(--sombra-dorada);
+   }
+
+
+
+   /* ==========================================================
+   PERFIL - USUARIO
+   ========================================================== */
+
+   /* ==========================================================
+   ESTILOS ESPECÍFICOS PARA LA PÁGINA DE PERFIL
+   ========================================================== */
+
+   .perfil-main-wrapper {
+       max-width: 750px;
+       margin: 100px auto 40px auto;
+       /* Centrado abajo de la barra fija */
+       padding: 0 15px;
+       display: flex;
+       flex-direction: column;
+       gap: 25px;
+   }
+
+   /* Tarjeta Principal de Información del Perfil */
+   .perfil-header-card {
+       background-color: var(--color-tarjeta);
+       border: 1px solid var(--color-principal);
+       border-radius: 16px;
+       padding: 30px;
+       box-shadow: 0 0 20px var(--sombra-dorada);
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+   }
+
+   .perfil-top-row {
+       display: flex;
+       align-items: center;
+       gap: 30px;
+   }
+
+   /* Foto del usuario */
+   .foto_perfil {
+       position: relative;
+       display: inline-block;
+   }
+
+   .perfil_foto {
+       width: 90px;
+       height: 90px;
+       border-radius: 50%;
+       object-fit: cover;
+       border: 2px solid var(--color-principal);
+   }
+
+   .estado_en_linea {
+       position: absolute;
+       bottom: 4px;
+       right: 4px;
+       width: 14px;
+       height: 14px;
+       background-color: #00ff66;
+       border: 2px solid var(--color-tarjeta);
+       border-radius: 50%;
+   }
+
+   /* Información del nombre y botón seguir */
+   .perfil_info {
+       display: flex;
+       align-items: center;
+       gap: 25px;
+   }
+
+   .perfil_info h2 {
+       font-size: 1.5rem;
+       font-weight: 700;
+       color: var(--texto);
+   }
+
+   .btn_seguir {
+       background-color: var(--color-principal);
+       color: #000;
+       border: none;
+       padding: 8px 22px;
+       border-radius: 8px;
+       font-weight: 700;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .btn_seguir:hover {
+       background-color: #f3ca4d;
+       box-shadow: 0 0 12px var(--sombra-dorada);
+   }
+
+   /* Estadísticas de perfil */
+   .estadisticas_perfil .numeros_perfil {
+       display: flex;
+       list-style: none;
+       gap: 35px;
+   }
+
+   .estadisticas_perfil .numeros_perfil li {
+       display: flex;
+       gap: 6px;
+       font-size: 0.95rem;
+       color: var(--texto-secundario);
+   }
+
+   .estadisticas_perfil .numeros_perfil strong {
+       color: var(--texto);
+       font-weight: 700;
+   }
+
+   /* Biografía */
+   .perfil_biografia {
+       display: flex;
+       flex-direction: column;
+       gap: 4px;
+       font-size: 0.92rem;
+       color: var(--texto-secundario);
+       border-left: 3px solid var(--color-principal);
+       padding-left: 12px;
+   }
+
+   /* Datos físicos (Peso y Altura) */
+   .info_cuerpo {
+       display: flex;
+       gap: 20px;
+       background-color: var(--fondo);
+       padding: 12px 18px;
+       border-radius: 10px;
+       border: 1px solid var(--border-color);
+   }
+
+   .dato-box {
+       display: flex;
+       flex-direction: column;
+       gap: 2px;
+   }
+
+   .label-dato {
+       font-size: 0.75rem;
+       color: var(--texto-secundario);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+   }
+
+   .info_cuerpo strong {
+       color: var(--color-principal);
+       font-size: 1.1rem;
+   }
+
+   /* Galería de Fotos del Perfil (Cuadrícula 3 columnas) */
+   .perfil_galeria {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 15px;
+   }
+
+   .usu-foto {
+       background-color: var(--color-tarjeta);
+       border: 1px solid var(--border-color);
+       border-radius: 12px;
+       overflow: hidden;
+       aspect-ratio: 1 / 1;
+       /* Cuadradas perfectas tipo Instagram */
+       transition: border-color 0.3s ease, transform 0.3s ease;
+   }
+
+   .usu-foto:hover {
+       border-color: var(--color-principal);
+       transform: translateY(-3px);
+       box-shadow: 0 4px 15px var(--sombra-dorada);
+   }
+
+   .usu-foto img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       display: block;
+   }

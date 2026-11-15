@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT - Inicio de Sesión</title>
+    <link rel="stylesheet" href="7.ESTILO_AIFIT.css">
+    <script src="8.app.js"></script>
+</head>
+
+<body>
+
+    <main class="hero-container">
+        <div class="card-inicio">
+            <h1 class="logo-title">AIFIT</h1>
+            <h2 class="sub-title">Iniciar Sesión</h2>
+
+            <!-- El formulario envuelve todo correctamente -->
+            <form action="/ingreso" method="POST" class="form-login">
+
+                <div class="input-group">
+                    <label for="usuarionombre">Nombre de usuario:</label>
+                    <input type="text" id="usuarionombre" name="usuarionombre" required autocomplete="off"
+                        placeholder="Tu usuario">
+                </div>
+
+                <div class="input-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required autocomplete="off"
+                        placeholder="tucorreo@AIFIT.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn btn-submit">Continuar</button>
+
+            </form>
+
+            <!-- Enlace opcional para volver al inicio -->
+            <div class="volver-link">
+                <a href="1.INICIO.html">← Volver al inicio</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT - Feed</title>
+    <link rel="stylesheet" href="7.ESTILO_AIFIT.css">
+    <script src="8.app.js"></script>
+</head>
+
+<body>
+
+    <div class="feed-container">
+
+        <!-- BARRA DE NAVEGACIÓN SUPERIOR (ESTILO INSTAGRAM) -->
+        <header class="navbar-feed">
+            <div class="nav-content">
+
+                <!-- Logo -->
+                <h1 class="nav-logo">AIFIT</h1>
+
+                <!-- Buscador -->
+                <form action="/buscar" method="GET" class="buscador-form">
+                    
+                    <button type="submit" class="btn-buscador">🔍</button>
+                </form>
+
+                <!-- Menú de Enlaces y Perfil -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="4.INDEX.html" class="inicio">Inicio</a></li>
+                        <li><a href="5.AIFIT.html" class="aifit">Aifit</a></li>
+                        <li><a href="6.PERFIL.html" class="perfil">Perfil</a></li>
+                    </ul>
+
+                    <!-- Info del Usuario Logueado -->
+                    <div class="user-pill">
+                        <img src="fotico.jpg" alt="Foto de perfil" class="perfilito">
+                        <span class="nombreperfil">Juan Huertas</span>
+                    </div>
+
+                    <!-- Botón Cerrar Sesión -->
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="btn-cerrar-sesion">Salir</button>
+                    </form>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL CENTRADO -->
+        <main class="main-feed-content">
+
+            <!-- SECCIÓN PARA CREAR PUBLICACIÓN -->
+            <section class="publicrea">
+                <form action="/cre_po" method="POST" enctype="multipart/form-data" class="form-crear-publi">
+                    <div class="crear-header">
+                        <img src="mipublicacion.jpg" alt="Mi foto" class="fotoperfil">
+                        <textarea name="publiparra" placeholder="¿Qué vas a entrenar hoy, Juan?" required></textarea>
+                    </div>
+
+                    <div id="vista-previa-miniatura" style="margin: 8px 0; display: none;"></div>
+
+                    <div class="crear-footer">
+                        <label for="subirfoto" class="btn_abjunto_foto">
+                            📷 Foto / Video
+                        </label>
+                        <input type="file" id="subirfoto" name="foticosubida" accept="image/*" style="display: none;">
+
+                        <button type="submit" class="btn_publicar">Publicar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- MURO DE PUBLICACIONES -->
+            <div class="muro_publicacion">
+
+                <article class="publiperson">
+
+                    <!-- Cabecera de la publicación -->
+                    <header class="infopubliusu">
+                        <div class="usuarioinfo">
+                            <img src="fotoperfil.jpg" alt="Foto de usuario" class="fotousu">
+                            <div class="usu-textos">
+                                <h4>Juan Huertas</h4>
+                                <span class="tiempoconectado">Hace 2 horas</span>
+                            </div>
+                        </div>
+                        <button class="btn_opciones_publi">⋮</button>
+                    </header>
+
+                    <!-- Contenido del Post -->
+                    <div class="contenido_publi">
+                        <p>Solo calistenia un dia mas un dia menos 💪</p>
+                        <div class="fotopersonpubli">
+                            <img src="fotopubli.jpg" alt="Foto de la publicacion">
+                        </div>
+                    </div>
+
+                    <!-- Pie de Reacciones y Comentarios -->
+                    <footer class="publi_reaccion">
+                        <div class="reacciones">
+                            <button class="btn_reaccion">❤️ <span>350</span></button>
+                            <button class="btn_reaccion">💬 <span>26</span></button>
+                            <button class="btn_reaccion">🔁 <span>5</span></button>
+                        </div>
+
+                        <!-- Caja de coEmentarios previos -->
+                        <div class="cajadecoment arios">
+                            <div class="comentario-item">
+                                <strong>Pablo_Flow</strong>
+                                <p>uy papi que cambio guevon.</p>
+                            </div>
+                        </div>
+
+                        <!-- Formulario para comentar -->
+                        <form action="/comentar" method="POST" class="form_comentar">
+                            <input type="hidden" name="publi_id" value="1">
+                            <input type="text" name="texto_comentario" placeholder="Agrega un comentario..." required
+                                autocomplete="off">
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </footer>
+
+                </article>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

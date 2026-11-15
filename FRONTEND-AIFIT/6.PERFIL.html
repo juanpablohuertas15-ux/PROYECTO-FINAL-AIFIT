@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT - Perfil</title>
+    <link rel="stylesheet" href="7.ESTILO_AIFIT.css">
+    <script src="8.app.js"></script>
+</head>
+
+<body class="body-perfil-page">
+
+    <div class="perfil-container">
+
+        <!-- BARRA DE NAVEGACIÓN SUPERIOR (FIJA) -->
+        <header class="navbar-feed">
+            <div class="nav-content">
+                <h1 class="nav-logo">AIFIT</h1>
+
+                <form action="/buscar" method="GET" class="buscador-form">
+                    <input type="text" id="b" name="b" placeholder="Buscar en AIFIT..." autocomplete="off">
+                    <button type="submit" class="btn-buscador">🔍</button>
+                </form>
+
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="4.INDEX.html" class="nav-link">Inicio</a></li>
+                        <li><a href="5.AIFIT.html" class="nav-link">Aifit</a></li>
+                        <li><a href="6.PERFIL.html" class="nav-link active-link">Perfil</a></li>
+                    </ul>
+
+                    <div class="user-pill">
+                        <img src="fotico.jpg" alt="Foto de perfil" class="perfilito">
+                        <input type="file" id="input-foto-perfil" style="display:none;">
+                        <span class="nombreperfil">Juan Huertas</span>
+                    </div>
+
+                    <form action="/logout" method="POST" style="display:inline;">
+                        <button type="submit" class="btn-cerrar-sesion">Salir</button>
+                    </form>
+                </nav>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL DEL PERFIL CENTRADO -->
+        <main class="perfil-main-wrapper">
+
+            <!-- CABECERA DEL PERFIL (INFORMACIÓN DEL USUARIO) -->
+            <section class="perfil-header-card">
+
+                <div class="perfil-top-row">
+                    <!-- Foto de perfil con indicador online -->
+                    <div class="foto_perfil">
+                        <img src="fotousu.jpg" alt="Foto usuario" class="perfil_foto">
+                        <input type="file" id="input-foto-perfil" style="display:none;">
+                        <span class="estado_en_linea"></span>
+                    </div>
+
+                    <!-- Nombre y botón Seguir -->
+                    <div class="perfil_info">
+                        <h2>Juan_Huertas</h2>
+                        <button class="btn_seguir">Seguir</button>
+                    </div>
+                </div>
+
+                <!-- Estadísticas (Seguidores, Seguidos, Publicaciones) -->
+                <div class="estadisticas_perfil">
+                    <ul class="numeros_perfil">
+                        <li><strong>15.600</strong> <span>Seguidores</span></li>
+                        <li><strong>267</strong> <span>Seguidos</span></li>
+                        <li><strong>48</strong> <span>Publicaciones</span></li>
+                    </ul>
+                </div>
+
+                <!-- Biografía -->
+                <div class="perfil_biografia">
+                    <p>🏋️‍♂️ Amante al fitness</p>
+                    <p>🔥 Día real</p>
+                    <p>🎸 Metallica</p>
+                </div>
+
+                <!-- Datos Físicos (Peso y Altura) -->
+                <div class="info_cuerpo">
+                    <div class="dato-box">
+                        <span class="label-dato">Peso</span>
+                        <span class="dato_peso"><strong>85.4 kg</strong></span>
+                    </div>
+                    <div class="dato-box">
+                        <span class="label-dato">Altura</span>
+                        <span class="dato_altura"><strong>1.85 m</strong></span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- GALERÍA DE PUBLICACIONES (CUADRÍCULA TIPO INSTAGRAM) -->
+            <section class="perfil_galeria">
+                <div class="usu-foto"><img src="foto1.jpg" alt="Dia 1"></div>
+                <div class="usu-foto"><img src="foto2.jpg" alt="Dia 2"></div>
+                <div class="usu-foto"><img src="foto3.jpg" alt="Dia 3"></div>
+                <div class="usu-foto"><img src="foto4.jpg" alt="Dia 4"></div>
+                <div class="usu-foto"><img src="foto5.jpg" alt="Dia 5"></div>
+                <div class="usu-foto"><img src="foto6.jpg" alt="Dia 6"></div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
